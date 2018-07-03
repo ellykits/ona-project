@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ProjectX</string>
+    <string name="log_in">Log in</string>
+    <string name="tell_your_story">ONA</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_an_account">No account yet? Create one</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="password_reset">Please enter your email address and we\'ll send you an immediate email containing
+    instructions for resetting your password.
+    </string>
+    <string name="manage_projects">(Manage your project(s))</string>
+    <string name="created_on">Created on</string>
+
+</resources>

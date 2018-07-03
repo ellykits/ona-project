@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:id="@+id/sampleHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_layout="@id/expansionLayout"
+        app:expansion_toggleOnClick="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Other Info"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/ona_prj_otherinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:text="..."
+                android:textColor="@color/colorLighterGray" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/headerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+        </RelativeLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expansion_expanded="false">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:paddingRight="@dimen/default_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_padding">
+                <TextView
+                    android:id="@+id/prj_billing_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Billing code"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/ona_prj_billing"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="ProjectX1"
+                    android:layout_toRightOf="@id/prj_billing_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toEndOf="@id/prj_billing_title" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingRight="@dimen/default_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_padding">
+                <TextView
+                    android:id="@+id/prj_location_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Location "
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/ona_prj_location"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Nairobi"
+                    android:layout_toRightOf="@id/prj_location_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toEndOf="@id/prj_location_title" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingRight="@dimen/default_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_padding"
+                android:paddingStart="@dimen/default_padding">
+                <TextView
+                    android:id="@+id/prj_description_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Description"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/ona_prj_description"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:layout_below="@id/prj_description_title"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+</LinearLayout>
