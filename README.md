@@ -17,3 +17,6 @@ Android Studio 3.0 and and above
 * [Dagger2](https://github.com/google/dagger) - Android dependency management
 * [Retrofit2](http://square.github.io/retrofit/) - For consuming REST API
 * [Butterknife](http://jakewharton.github.io/butterknife/) - Binding view on android
+
+```
+![](screenshots/Screenshot_20180703-123510.png)
