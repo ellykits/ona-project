@@ -20,5 +20,4 @@ Android Studio 3.0 and and above
 * [Android Architectural Components](https://developer.android.com/topic/libraries/architecture/) - Used for architecturing app
 * [RXJava2](https://github.com/ReactiveX/RxJava) -RxJava2 adapter for retrofit 
 
-```
-![Screenshots](https://github.com/ellykits/onaproject/blob/master/screenshots/Screenshot_20180703-123510.png)
+<img src="imgs/screen1.png" height="380" width="240" />  <img src="imgs/screen2.png" height="380" width="240" />  <img src="imgs/screen3.png" height="380" width="240" />
