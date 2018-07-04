@@ -9,7 +9,7 @@ public interface SessionRepository {
 
     Single<String> refreshToken();
 
-    Single<Boolean> invalidateToken();
+    boolean invalidateToken();
 
     Single<String> isUserLoggedIn();
 

@@ -2,19 +2,17 @@ package com.coder.nerdsoft.projectx.presentation.ui.home.di;
 
 import android.arch.lifecycle.ViewModelProvider;
 
-import com.coder.nerdsoft.projectx.data.remote.RestApiManager;
-import com.coder.nerdsoft.projectx.data.repository.ProjectRepositoryImpl;
-import com.coder.nerdsoft.projectx.domain.common.TransformerForObservable;
 import com.coder.nerdsoft.projectx.domain.common.TransformerForSingle;
 import com.coder.nerdsoft.projectx.domain.contract.ProjectRepository;
+import com.coder.nerdsoft.projectx.domain.contract.SessionRepository;
 import com.coder.nerdsoft.projectx.domain.entity.ProjectEntity;
 import com.coder.nerdsoft.projectx.domain.usecase.GetProjects;
-import com.coder.nerdsoft.projectx.presentation.common.ObservableAsyncTransformer;
+import com.coder.nerdsoft.projectx.domain.usecase.InvalidateToken;
+import com.coder.nerdsoft.projectx.domain.usecase.RefreshToken;
 import com.coder.nerdsoft.projectx.presentation.common.SingleAsyncTransformer;
 import com.coder.nerdsoft.projectx.presentation.common.ViewModelUtil;
 import com.coder.nerdsoft.projectx.presentation.ui.home.MainActivity;
 import com.coder.nerdsoft.projectx.presentation.ui.home.MainActivityViewModel;
-import com.coder.nerdsoft.projectx.presentation.ui.login.LoginViewModel;
 
 import java.util.List;
 
@@ -39,7 +37,26 @@ public class MainActivityModule {
 
     @MainActivityScope
     @Provides
+    public RefreshToken provideRefreshToken(TransformerForSingle<String> transformer, SessionRepository
+                                            repository){
+        return new RefreshToken(transformer,repository);
+    }
+
+    @MainActivityScope
+    @Provides
+    public InvalidateToken provideInvalidateToken(SessionRepository repository){
+        return new InvalidateToken(repository);
+    }
+
+    @MainActivityScope
+    @Provides
     public TransformerForSingle<List<ProjectEntity>> provideTransformer(){
+        return new SingleAsyncTransformer<>();
+    }
+
+    @MainActivityScope
+    @Provides
+    public TransformerForSingle<String> provideStringTransformer(){
         return new SingleAsyncTransformer<>();
     }
 

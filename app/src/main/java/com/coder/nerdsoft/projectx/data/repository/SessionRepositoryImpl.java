@@ -40,8 +40,8 @@ public class SessionRepositoryImpl implements SessionRepository {
     }
 
     @Override
-    public Single<Boolean> invalidateToken() {
-        return Single.just(mTokenPersistence.deleteToken());
+    public boolean invalidateToken() {
+        return mTokenPersistence.deleteToken();
     }
 
     @Override

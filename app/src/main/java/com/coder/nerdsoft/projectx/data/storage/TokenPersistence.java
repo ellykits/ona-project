@@ -21,7 +21,7 @@ public class TokenPersistence {
         mPrefs.edit().putString(DataConstants.REFRESH_TOKEN, token.getRefreshToken()).apply();
     }
 
-    public boolean deleteToken(){
+    public  boolean deleteToken(){
 
         if (mPrefs.contains(DataConstants.AUTH_TOKEN) &&  mPrefs.contains(DataConstants.REFRESH_TOKEN))  {
             mPrefs.edit().remove(DataConstants.AUTH_TOKEN).apply();

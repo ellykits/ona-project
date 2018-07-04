@@ -81,7 +81,10 @@ public class MainActivity extends BaseActivity<MainActivityViewState> {
 
     @Override
     protected void handleErrors(Throwable e) {
-        Snackbar.make(mCoordLayout, "Session expired login required", Snackbar.LENGTH_LONG).show();
+
+
+        Snackbar.make(mCoordLayout, "This session expired you need to login",
+                Snackbar.LENGTH_LONG).show();
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
@@ -102,6 +105,7 @@ public class MainActivity extends BaseActivity<MainActivityViewState> {
         ));
     }
     private void viewSelectedProject(long id){
+
         Intent intent = new Intent(getApplicationContext(),DisplayProjectActivity.class);
         intent.putExtra(DomainConstants.PROJECT_ID,id);
         startActivity(intent);
